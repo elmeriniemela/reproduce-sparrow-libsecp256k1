@@ -66,6 +66,12 @@ podman run --rm --network=none \
   localhost/sparrow-secp256k1-builder
 ```
 
+Get a shell inside:
+
+```sh
+podman run --rm -it --entrypoint /bin/bash localhost/sparrow-secp256k1-builder
+```
+
 
 ## Toolchain
 
