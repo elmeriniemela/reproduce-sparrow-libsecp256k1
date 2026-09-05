@@ -23,21 +23,49 @@ This revision is BlockstreamResearch/secp256k1-zkp commit `f3708a1ecb445b1b05a0f
 
 ## Reproduce
 
-Install Podman, then run this command from the repository root:
+Install Podman. Build the self-contained builder image once while online:
 
 ```sh
-podman run --rm \
-  --volume "$PWD:/work:Z" \
-  --workdir /work \
-  docker.io/library/ubuntu:20.04 \
-  ./reproduce-libsecp256k1.sh
+podman build --tag localhost/sparrow-secp256k1-builder .
 ```
 
-The script provisions the container, builds the library, prints its SHA-256, and writes:
+The image contains the source, build script, and complete toolchain. Reproduce the
+library without network access:
+
+```sh
+podman run --rm --network=none \
+  --volume "$PWD:/output:Z" \
+  localhost/sparrow-secp256k1-builder
+```
+
+The script prints the SHA-256 and writes:
 
 ```text
 ./reproduced-libsecp256k1.so
 ```
+
+### Preserve the builder for offline use
+
+Export the fully provisioned image and record its checksum:
+
+```sh
+podman save --format oci-archive \
+  --output secp256k1-builder.oci.tar \
+  localhost/sparrow-secp256k1-builder
+sha256sum secp256k1-builder.oci.tar \
+  > secp256k1-builder.oci.tar.sha256
+```
+
+Run the build from the saved oci-archive:
+
+```sh
+sha256sum --check secp256k1-builder.oci.tar.sha256
+podman load --input secp256k1-builder.oci.tar
+podman run --rm --network=none \
+  --volume "$PWD:/output:Z" \
+  localhost/sparrow-secp256k1-builder
+```
+
 
 ## Toolchain
 

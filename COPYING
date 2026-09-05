@@ -6,8 +6,8 @@ Repository-specific material
 
 Copyright (c) 2026 reproduce-sparrow-libsecp256k1 contributors
 
-README.md, reproduce-libsecp256k1.sh, and SHA256SUMS are licensed under
-the MIT License below.
+README.md, Containerfile, reproduce-libsecp256k1.sh and the SHA256SUMS
+are licensed under the MIT License below.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
