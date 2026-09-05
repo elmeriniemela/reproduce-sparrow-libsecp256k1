@@ -16,10 +16,10 @@ Based on https://github.com/sparrowwallet/drongo/issues/52#issuecomment-54759259
 
 - Repository: `https://github.com/bitcoin-s/secp256k1-zkp`
 - Branch: `2021-05-19-jni-mac-big-sur-m1`
-- Commit: `6dd724b72bb2d47de514eb92e96c6ae6d26ae160`
+- Commit: [`6dd724b72bb2d47de514eb92e96c6ae6d26ae160`](https://github.com/bitcoin-s/secp256k1-zkp/commit/6dd724b72bb2d47de514eb92e96c6ae6d26ae160)
 - Local source: `secp256k1-zkp/`
 
-This revision is BlockstreamResearch/secp256k1-zkp commit `f3708a1ecb445b1b05a0f8fcd1da6a88f83d89c4` plus five JNI commits. The JNI sources are included under `src/java/`.
+This revision is BlockstreamResearch/secp256k1-zkp commit [`f3708a1ecb445b1b05a0f8fcd1da6a88f83d89c4`](https://github.com/BlockstreamResearch/secp256k1-zkp/commit/f3708a1ecb445b1b05a0f8fcd1da6a88f83d89c4) plus five JNI commits. The JNI sources are included under `src/java/`.
 
 ## Reproduce
 
