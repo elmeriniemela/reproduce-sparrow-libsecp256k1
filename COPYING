@@ -1,0 +1,63 @@
+Licensing information
+=====================
+
+Repository-specific material
+----------------------------
+
+Copyright (c) 2026 reproduce-sparrow-libsecp256k1 contributors
+
+README.md, reproduce-libsecp256k1.sh, and SHA256SUMS are licensed under
+the MIT License below.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Third-party material
+--------------------
+
+The following files are separate works distributed together with the
+repository. They are not covered by the repository-specific MIT grant above
+and retain their respective copyright notices and license terms.
+
+* secp256k1-zkp/ and reproduced-libsecp256k1.so
+
+  The source and the library built from it are licensed under the MIT License.
+  See secp256k1-zkp/COPYING for the applicable copyright and license notice.
+
+* cpp-9_9.3.0-17ubuntu1~20.04_amd64.deb
+* gcc-9-base_9.3.0-17ubuntu1~20.04_amd64.deb
+* gcc-9_9.3.0-17ubuntu1~20.04_amd64.deb
+* libasan5_9.3.0-17ubuntu1~20.04_amd64.deb
+* libgcc-9-dev_9.3.0-17ubuntu1~20.04_amd64.deb
+
+  These are unmodified Ubuntu binary packages built from GCC 9.3.0. They
+  contain components under multiple licenses, principally GPL-3.0-or-later,
+  the GCC Runtime Library Exception 3.1, and permissive licenses used by GCC
+  and libsanitizer. The authoritative package copyright and license notice is
+  stored inside gcc-9-base_9.3.0-17ubuntu1~20.04_amd64.deb at:
+
+      usr/share/doc/gcc-9-base/copyright
+
+  The other packages refer to that notice through their usr/share/doc
+  symlinks. Exact corresponding source and Ubuntu packaging are available at:
+
+      https://launchpad.net/ubuntu/+source/gcc-9/9.3.0-17ubuntu1~20.04
+
+  Redistribution of these packages must comply with their own terms,
+  including any applicable corresponding-source requirements.
